@@ -162,13 +162,11 @@ Forma.post("/api/v1/consent/apply", async (req, res) => {
 Forma.post("/game_server/api/versions/info", errorhandler(async (req, res, next) => {
 	const PlatformID = parseInt(req.get("x-inu-application-platform"));
 	let UpdateURL = "https://play.google.com/store/apps/details?id=com.bandainamcoent.torays";
-	let AssetDirectory = AssetList['Android_Manifest'];
 	if (PlatformID == 1) {
 		UpdateURL = "https://itunes.apple.com/jp/app/teiruzu-obu-za-reizu/id1113231866?mt=8";
-		AssetDirectory = AssetList['iOS_Manifest'];
 	}
 	res.locals.ResponseBody['message'] = {
-		'asset_bundle_directory': AssetDirectory,
+		'asset_bundle_directory': AssetList['Manifest'],
 		'asset_version': 2,
 		'platform_type': PlatformID,
 		'proto_ver': req.body['proto_ver'],
@@ -357,7 +355,7 @@ Forma.post("/game_server/api/fav_chara/list", async (req, res, next) => {
 						'reward_value': 343002
 					}
 				]
-			},
+			}
 		]
 	}
 	next();
