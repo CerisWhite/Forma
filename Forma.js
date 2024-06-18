@@ -166,8 +166,8 @@ Forma.post("/game_server/api/versions/info", errorhandler(async (req, res, next)
 		UpdateURL = "https://itunes.apple.com/jp/app/teiruzu-obu-za-reizu/id1113231866?mt=8";
 	}
 	res.locals.ResponseBody['message'] = {
-		'asset_bundle_directory': AssetList['Manifest'],
-		'asset_version': 7,
+		'asset_bundle_directory': AssetList['Directory'],
+		'asset_version': AssetList['Version'],
 		'platform_type': PlatformID,
 		'proto_ver': req.body['proto_ver'],
 		's3_url': "https://cdn-production-cf.toco.tales-ch.jp",
