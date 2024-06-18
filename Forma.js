@@ -169,7 +169,7 @@ Forma.post("/game_server/api/versions/info", errorhandler(async (req, res, next)
 		'asset_bundle_directory': AssetList['Directory'],
 		'asset_version': AssetList['Version'],
 		'platform_type': PlatformID,
-		'proto_ver': req.body['proto_ver'],
+		'proto_ver': AssetList['ProtoVersion'],
 		's3_url': "https://cdn-production-cf.toco.tales-ch.jp",
 		'server_url': "https://" + ServerConfig['URL'],
 		'update_url': UpdateURL
