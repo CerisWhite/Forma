@@ -167,7 +167,7 @@ Forma.post("/game_server/api/versions/info", errorhandler(async (req, res, next)
 	}
 	res.locals.ResponseBody['message'] = {
 		'asset_bundle_directory': AssetList['Manifest'],
-		'asset_version': 2,
+		'asset_version': 7,
 		'platform_type': PlatformID,
 		'proto_ver': req.body['proto_ver'],
 		's3_url': "https://cdn-production-cf.toco.tales-ch.jp",
