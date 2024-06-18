@@ -21,6 +21,7 @@ else {
 	ServerConfig = {
 		'URL': "127.0.0.1",
 		'Port': 9050,
+		'CDNURL': "https://cdn-production-cf.toco.tales-ch.jp", 
 		'PhotonURL': "127.0.0.1:9001",
 		'StateURL': "",
 		'AssetPass': "",
@@ -170,7 +171,7 @@ Forma.post("/game_server/api/versions/info", errorhandler(async (req, res, next)
 		'asset_version': AssetList['Version'],
 		'platform_type': PlatformID,
 		'proto_ver': AssetList['ProtoVersion'],
-		's3_url': "https://cdn-production-cf.toco.tales-ch.jp",
+		's3_url': ServerConfig['CDNURL'],
 		'server_url': "https://" + ServerConfig['URL'],
 		'update_url': UpdateURL
 	};
